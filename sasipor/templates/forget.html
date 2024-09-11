@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget_Password</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="background-color: black;">
+    <center class="center">
+        <section class="container1">
+    
+            <form style="margin-top: 80px;"action="{% url 'update' %}" method="post">
+            {% csrf_token %}
+                <input class="input1" type="text" name="firstname" placeholder="Enter Your Name"><br><br>
+                <input class="input1" type="text" name="lastname" placeholder="Enetr Your Last Name"><br><br>
+                <input class="input1" type="email" name="email" placeholder="Enter Your Email"><br><br>
+                <input class="input1" type="password" name="password" placeholder="Password"><br><br>
+                <input class="button1" type="submit" value="Update">
+                <p style="color:red;">{{k}}</p>
+        
+
+
+            </form>
+        </section>
+    </center>
+</body>
+</html>

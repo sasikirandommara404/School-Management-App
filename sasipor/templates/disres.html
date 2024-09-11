@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table,thead,th,td,tr,tbody{
+            border: 1px solid lightgreen;
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+        table{
+            margin-top: 100px;
+            margin-left: 42%;
+            margin-right: 25%;
+        }
+        p{
+            /* margin-top: 100px; */
+            margin-left: 42%;
+            margin-right: 25%;
+        }
+    </style>
+</head>
+<body>
+    {% include 'studentnav.html' %}
+ 
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Awarded</th>
+                <th>Marks</th>
+                
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>Telugu</td>
+                <td>{{ke.Telugu}}</td>
+                <td>100</td>
+                
+                
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td>{{ke.Hindi}}</td>
+                <td>100</td>
+                
+                
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>{{ke.English}}</td>
+                <td>100</td>
+                
+                
+            </tr>
+            <tr>
+                <td>Maths</td>
+                <td>{{ke.Maths}}</td>
+                <td>100</td>
+                
+                
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>{{ke.Physics}}</td>
+                <td>50</td>
+                
+                
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td>{{ke.Chemistry}}</td>
+                <td>50</td>
+                
+                
+            </tr>
+            <tr></tr>
+                <td>Science</td>
+                <td>{{ke.Science}}</td>
+                <td>100</td>
+                
+                
+            </tr>
+            <tr></tr>
+                <td>Social</td>
+                <td>{{ke.Social}}</td>
+                <td>100</td>
+               
+                
+            </tr>
+        </tbody>
+        
+    </table>
+    <p>Status:{{s}}</p>
+</body>
+</html>

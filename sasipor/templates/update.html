@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="/static/stu.css">
+</head>
+<body style="background-color: black;">
+    {% include 'studentnav.html' %}
+    <center style="margin-top:100px;">
+    
+        <table class="table">
+           
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>RollNumber</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>PhoneNumber</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Update</th>
+                
+            </tr>
+        </thead>
+        {% if key %}
+        <tbody>
+            {% for i in key %}
+            <tr>
+               
+                <td>{{i.id}}</td>
+                <td>{{i.RollNumber}}</td>
+                <td>{{i.FirstName}}</td>
+                <td>{{i.LastName}}</td>
+                <td>{{i.PhoneNumber}}</td>
+                <td>{{i.Course}}</td>
+                <td>{{i.Year}}</td>
+                <td>{{i.Gender}}</td>
+                <td>{{i.City}}</td>
+                <td>{{i.State}}</td>
+                <td>
+                    <form action="{% url 'f' %}" method="get">
+                        <input type="submit" value="Update">
+
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        {% endif %}
+           
+        </table><br><br>
+        <button style="background-color: blue;border: none; border-radius: 2px;height: 40px;width: 120px;color: white;">
+            <a href="{% url 'main' %}" style="text-decoration: none;color:white ;">Home</a></button>
+        
+    </center>
+    
+    
+</body>
+</html>

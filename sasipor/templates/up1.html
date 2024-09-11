@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+    <style>
+        .div{
+            height:300px;
+            width: 300px;
+            margin-top: 150px;
+            background-color: rgb(245, 245, 245);
+            text-align: center;
+            margin-left: 37%;
+            margin-right: 25%;
+
+        }
+        .input{
+            margin-top: 60px;
+            height: 27px;
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 1px;
+        }
+        .input1{
+            height: 27px;
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 1px;
+        }
+        .button{
+            height:30px;
+            width:100px;
+            background-color: blue;
+            border:none;
+            border-radius: 2px;
+            color:white;
+        }
+    </style>
+    
+</head>
+<body>
+    {% include 'studentnav.html' %}
+    <div class="div">
+    <form action="" method="post">
+        {% csrf_token %}
+        <input class="input" class="input1" type="text" placeholder="RollNumber" name="roll"><br><br>
+        <input class="input1"  type="email" placeholder="Enter Email id" name="email"><br><br>
+        <input class="input1"  type="password" placeholder="Password" name="pass"><br><br>
+        <input type="submit" class="button" value="Next">
+        <p style="color:red">{{msg}}</p>
+        <p style="color:red">{{mg}}</p>
+
+    </form>
+    </form>
+    </div>
+    
+</body>
+</html>

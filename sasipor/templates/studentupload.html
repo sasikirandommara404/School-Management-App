@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Uploading</title>
+    <link rel="stylesheet" href="/static/stu.css">
+</head>
+<body style="background-color: black;">
+    {% include 'adminnav.html' %}
+    <div class="div">
+        
+            <h1 style="margin-top: 100px;">New Student Details Uploading</h1>
+            <form action="{% url 'fill' %}" method="post">
+                {% csrf_token %}
+                <input class="input" type="text" placeholder="RollNumber" name="rollnum"><br><br>
+                <input class="input" type="text" placeholder="FirstName" name="fname"><br><br>
+                <input class="input" type="text" placeholder="LastName" name="lname"><br><br>
+                <input class="input" type="tel" placeholder="PhoneNumber" name="phone"><br><br>
+                <select class="input" name="course">
+                    <option >--------------------------Course--------------------------</option>
+                    <option >B.Tech</option>
+                    <option >MBA</option>
+                    <option >MCA</option>
+                    <option>M.Tech</option>
+                </Select><br><br>
+                <select class="input" name="year">
+                    <option >-----------------------------Year-----------------------------</option>
+                    <option >1</option>
+                    <option  >2</option>
+                    <option >3</option>
+                    <option >4</option>
+                </Select><br><br>
+        
+               <span> Gender:
+                Male<input type="radio" name="gender" value="Male">
+                Female<input type="radio"name="gender" value="Female"></span><br><br>
+                <input class="input" type="text" placeholder="City" name="city"><br><br>
+                <select class="input" name="state">
+                    <option>----------------------------State----------------------------</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Karnataka</option>
+                    <option>TamilaNadu</option>
+                    <option>Kerala</option>
+                    <option>Maharastra</option>
+                    <option>Telangana</option>
+                    <option>Goa</option>
+                    <option>Madya Pradesh</option>
+                    <option>Gujarath</option>
+                    <option>Odisha</option>
+                    <option>Jharkand</option>
+                    <option>Meghalaya</option>
+                    <option>Rajastan</option>
+                    <option>Panjab</option>
+                    <option>Haryana</option>
+                    <option>Westbengal</option>
+                    <option>HimachalPradesh</option>
+                    <option>Jammu & Kashmir</option>
+                    <option>Uttarakhand</option>
+                    <option>UttaraPradesh</option>
+                    <option>Bhihar</option>
+                    <option>Sikkim</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Chattisgad</option>
+                    <option>Nagaland</option>
+                    <option>Mijarom</option>
+                    <option>TamilaNadu</option>
+                    <option>Kerala</option>
+                    <option>Assam</option>
+                    <option>Manipal</option>
+                    <option>Tripura</option>
+                    <option>Kerala</option>
+                    
+
+
+                </Select><br><br>
+                <input class="button" type="submit" value="Upload">
+                <button class="button"><a href="{% url 'show' %}" style="text-decoration: none; color: white;">Show Details</a>   
+                </button>
+            
+
+
+                
+
+            </form>
+    
+        
+    </div>
+</body>
+</html>

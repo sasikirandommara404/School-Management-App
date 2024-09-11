@@ -1,0 +1,52 @@
+.div{
+    height:550px;
+    width:500px;
+    margin-top:100px;
+    background-color: whitesmoke;
+    border-radius:2px;
+    margin-left:30%;
+    margin-right: 25%;
+    text-align: center;
+    
+
+}
+
+.input{
+    height:30px;
+    width:300px;
+    border:1px solid gray ;
+    border-radius: 1px;
+    
+}
+.button{
+    border:none;
+    background-color: blue;
+    color:white;
+    height:40px;
+    width:150px;
+    border-radius: 2px;
+}
+.disbody{
+    background-color: black;
+    color:white;
+
+
+}
+.table{
+    border-collapse: collapse;
+    /* border-color: white; */
+    border: 2px solid white;
+    overflow: scroll;
+}
+.table>tr,th,td{
+    color:white;
+    border: 2px solid white;
+}
+.resdiv{
+    margin-top: 100px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 2px;
+    height: 450px;
+    width: 450px;
+}

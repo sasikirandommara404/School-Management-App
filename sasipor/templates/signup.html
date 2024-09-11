@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_Up</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="background-color: black;">
+    <center class="center1">
+        <section class="container1">
+            <h1 class="h11" >Sign Up</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input class="input1" type="text" name="name" placeholder="Username"><br><br>
+                <input class="input1" type="text" name="name1" placeholder="Enter Your Name"><br><br>
+                <input class="input1" type="text" name="lastname" placeholder="Enetr Your Last Name"><br><br>
+                <input class="input1" type="email" name="email" placeholder="Enter Your Email"><br><br>
+                <input class="input1" type="password" name="password" placeholder="Password"><br><br>
+                <div style="display: flex;flex-direction: row;justify-content: space-evenly; margin-left: 50px;margin-right: 50px;">
+                <input class="button1" type="submit" value="Sign Up">
+                <button class="button1"><a style="text-decoration: none;color: white;" href="{% url 'home' %}">Login</a></button>
+                </div>
+                <p style="color:red">{{ke}}</p>
+        
+
+
+            </form>
+        </section>
+    </center>
+</body>
+</html>

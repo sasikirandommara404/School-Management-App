@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Uploading</title>
+    <link rel="stylesheet" href="/static/stu.css">
+    <style>
+        .h1{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    {% include 'adminnav.html' %}
+    <div style=" margin-top: 100px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 2px;
+    height: 580px;
+    width: 500px;
+    margin-left: 30%;
+    margin-right: 25%;">
+    <h1 class="h1">Upload Results</h1>
+    
+    <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <input class="input" type="text"   placeholder="RollNumber" name="rollnum"><br><br>
+        <input class="input" type="number" placeholder="TeluguMarks" name="tel"><br><br>
+        <input class="input" type="number" placeholder="HindiMarks" name="h"><br><br>
+        <input class="input" type="number" placeholder="EnglishMarks" name="e"><br><br>
+        <input class="input" type="number" placeholder="MathsMarks" name="m"><br><br>
+        <input class="input" type="number" placeholder="PhysicsMarks" name="p"><br><br>
+        <input class="input" type="number" placeholder="ChemistryMarks" name="c"><br><br>
+        <input class="input" type="number" placeholder="ScienceMarks" name="sc"><br><br>
+        <input class="input" type="number" placeholder="SocialMarks" name="s"><br><br>
+        <input type="submit" class="button" value="Upload">
+  
+    </form>
+    </div>
+</body>
+</html>

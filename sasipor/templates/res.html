@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        .input{
+            margin-top:200px;
+            margin-left: 40%;
+            margin-right:25%;
+            height:30px;
+            width:250px;
+            border:1px solid gray;
+            border-radius: 2px;
+            /* text-align: center; */
+        }
+        .input1{
+            margin-left: 40%;
+            margin-right:25%;
+            height:30px;
+            width:120px;
+            border: none;
+            background-color: blue;
+            border-radius: 2px;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    {% include 'studentnav.html' %}
+    <form action="{% url 'check' %}" method="post">
+        {% csrf_token %}
+        <input class="input" type="text" name="rollnumber" placeholder="Enter Your Roll Number"><br><br>
+        <input class="input1" type="submit" value="check">
+        <p style="color:red; margin-left: 40%; margin-right:25%;">{{kj}}</p>
+
+    </form>
+</body>
+</html>

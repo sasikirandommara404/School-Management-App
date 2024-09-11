@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfield Academy</title>
+    <link rel="stylesheet" href="/static/studentnav.css">
+</head>
+<body>
+    <nav class="navbar" style="position: fixed;width: 100%;top: 0;left: 0;z-index: 1000;">
+        <div class="navbar-logo">
+            <img src="/static/school-1.jpg" alt="Greenfield Academy Logo">
+            <span>Greenfield Academy</span>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="{% url 'main' %}">Home</a></li>
+            <li><a href="{% url 'show1' %}">Update</a></li>
+            <li><a href="{% url 'resu' %}">Results</a></li>
+            <li><a href="{% url 'home' %}">Logout</a></li>
+        </ul>
+        <div class="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <script src="/static/stunav.js"></script>
+</body>
+</html>
